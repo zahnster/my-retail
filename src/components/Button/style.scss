@@ -17,8 +17,8 @@
 
 	// Alternate style button
 	&.alt {
-		border-color: $textColor;
-		background: linear-gradient(lighten($textColor, 50), lighten($textColor, 20) 5px, $textColor 10px);
+		border-color: $textAltColor;
+		background: linear-gradient(lighten($textAltColor, 50), lighten($textAltColor, 20) 5px, $textAltColor 10px);
 	}
 
 	// Hover state
@@ -38,7 +38,7 @@
 		border: none;
 		padding: 4px 15px;
 		background: $tertiaryColor;
-		color: $textColor;
+		color: $textAltColor;
 		font-size: 0.8rem;
 		box-shadow: none;
 

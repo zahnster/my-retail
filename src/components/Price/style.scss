@@ -1,14 +1,15 @@
 @import '../../globals';
 
 .price {
+	color: $textAltColor;
 	font-size: 1.75rem;
 	font-weight: 700;
 
 	.price-type {
-		color: $textAltColor;
+		margin-left: 5px;
+		color: $textColor;
 		font-size: 0.8rem;
 		font-weight: 400;
 		text-transform: lowercase;
-		margin-left: 5px;
 	}
 }

@@ -3,8 +3,8 @@
 .product-detail {
 	.product-title {
 		@extend .l1-header;
-		text-align: center;
 		margin: 2rem 0;
+		text-align: center;
 	}
 
 	.price {
@@ -19,7 +19,30 @@
 		}
 	}
 
+	.product-returns {
+		margin: 10px 0;
+		display: flex;
+		align-items: center;
+
+		.product-returns-title {
+			padding-right: 10px;
+			font-size: 1.2rem;
+			font-weight: 400;
+			text-transform: lowercase;
+			line-height: 1;
+		}
+
+		.product-returns-content {
+			flex: 1;
+			border-left: 1px solid $borderColor;
+			padding: 0 10px;
+			font-size: 0.7rem;
+		}
+	}
+
 	.meta-buttons {
+		padding: 20px 0;
+
 		.button {
 			margin-right: 10px;
 		}

@@ -5,8 +5,8 @@ $primaryColor: #C91300;
 $secondaryColor: #000;
 $tertiaryColor: #F3F3F3;
 
-$textColor: #000;
-$textAltColor: #777;
+$textColor: #777;
+$textAltColor: #000;
 $textContrastColor: #fff;
 
 $borderColor: #ccc;
@@ -17,11 +17,13 @@ $focusColor: #0968A9;
  // Typography
  //
 .l1-header {
+	color: $textAltColor;
 	font-weight: 200;
 	font-size: 1.6rem;
 }
 
 .l2-header {
+	color: $textAltColor;
 	font-weight: 400;
 	font-size: 1.8rem;
 }

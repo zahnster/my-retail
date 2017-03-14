@@ -61,8 +61,8 @@ class ProductDetail extends Component {
 				</div>
 
 				<div className='product-returns'>
-					<h3>Returns</h3>
-					<p>This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store and online.</p>
+					<h3 className='product-returns-title'>Returns</h3>
+					<p className='product-returns-content'>This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store and online.</p>
 				</div>
 
 				<div className='meta-buttons'>
