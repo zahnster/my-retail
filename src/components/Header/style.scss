@@ -1,0 +1,13 @@
+@import '../../globals';
+
+.header {
+	background: $primaryColor;
+	color: $textContrastColor;
+	text-align: center;
+	padding: 0.5rem 0;
+
+	.logo {
+		font-size: 30px;
+		font-weight: 200;
+	}
+}
