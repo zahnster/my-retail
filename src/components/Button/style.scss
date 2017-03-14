@@ -1,0 +1,54 @@
+@import '../../globals';
+
+.button {
+	$buttonShadow: 0 1px 2px rgba(0,0,0,0.4);
+
+	outline: none;
+	border: 1px solid $primaryColor;
+	border-radius: 2px;
+	padding: 5px 15px;
+	background: linear-gradient(lighten($primaryColor, 15), lighten($primaryColor, 5) 5px, $primaryColor 10px);
+	color: $textContrastColor;
+	font-size: 1.1rem;
+	font-weight: 200;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+	box-shadow: $buttonShadow;
+
+	// Alternate style button
+	&.alt {
+		border-color: $textColor;
+		background: linear-gradient(lighten($textColor, 50), lighten($textColor, 20) 5px, $textColor 10px);
+	}
+
+	// Hover state
+	&:hover {
+
+	}
+
+	// Focus state
+	&:focus {
+		box-shadow: 0 0 5px 1px $focusColor;
+	}
+
+	// Secondary style button
+	&.secondary {
+		$darkenedColor: darken($tertiaryColor, 15);
+
+		border: none;
+		padding: 4px 15px;
+		background: $tertiaryColor;
+		color: $textColor;
+		font-size: 0.8rem;
+		box-shadow: none;
+
+		&:hover {
+			background: $darkenedColor;
+		}
+
+		&:focus {
+			box-shadow: 0 0 4px 0 $focusColor;
+			background: $darkenedColor;
+		}
+	}
+}

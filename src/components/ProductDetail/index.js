@@ -56,7 +56,7 @@ class ProductDetail extends Component {
 				<QuantityField />
 
 				<div className='product-actions'>
-					<Button label='Pick Up In Store' clickHandler={this.openStorePickup} />
+					<Button label='Pick Up In Store' clickHandler={this.openStorePickup} cssClass='alt' />
 					<Button label='Add To Cart' clickHandler={this.addToCart} />
 				</div>
 
@@ -66,9 +66,9 @@ class ProductDetail extends Component {
 				</div>
 
 				<div className='meta-buttons'>
-					<Button label='Add to Registry' clickHandler={this.addToRegistry} />
-					<Button label='Add To List' clickHandler={this.addToList} />
-					<Button label='Share' clickHandler={this.share} />
+					<Button label='Add to Registry' clickHandler={this.addToRegistry} cssClass='secondary' />
+					<Button label='Add To List' clickHandler={this.addToList} cssClass='secondary' />
+					<Button label='Share' clickHandler={this.share} cssClass='secondary' />
 				</div>
 
 				<div className='product-highlights'>
