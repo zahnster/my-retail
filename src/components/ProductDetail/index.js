@@ -72,8 +72,8 @@ class ProductDetail extends Component {
 				</div>
 
 				<div className='product-highlights'>
-					<h2>Product Highlights</h2>
-					<ul>
+					<h2 className='product-highlights-title'>Product Highlights</h2>
+					<ul className='product-highlights-list'>
 						{product.ItemDescription[0].features.map((item, index) => (
 							<li key={`highlight-${index}`} dangerouslySetInnerHTML={{__html: item}}></li>
 						))}

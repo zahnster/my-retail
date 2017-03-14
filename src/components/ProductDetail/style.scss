@@ -41,10 +41,32 @@
 	}
 
 	.meta-buttons {
-		padding: 20px 0;
+		margin: 20px 0;
 
 		.button {
 			margin-right: 10px;
+		}
+	}
+
+	.product-highlights {
+		margin: 20px 0;
+
+		.product-highlights-title {
+			@extend .l2-header;
+			margin-bottom: 20px;
+		}
+
+		.product-highlights-list {
+			margin-left: 20px;
+			font-size: 0.9rem;
+
+			li {
+				margin-bottom: 5px;
+			}
+
+			strong {
+				font-weight: 400;
+			}
 		}
 	}
 }
