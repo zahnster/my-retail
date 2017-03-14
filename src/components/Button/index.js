@@ -8,7 +8,7 @@ class Button extends Component {
 		const className = `button ${this.props.cssClass}`
 
 		return (
-			<button className={className}>
+			<button className={className} onClick={this.props.clickHandler}>
 				{this.props.label}
 			</button>
 		)
