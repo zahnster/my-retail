@@ -9,7 +9,6 @@
 
 	.quantity-label {
 		font-size: 0.9rem;
-		color: $textAltColor;
 		margin: 0 50px 0 5px;
 	}
 
@@ -22,7 +21,7 @@
 		width: 30px;
 		text-align: center;
 		font-size: 1.2rem;
-		font-weight: 700;
+		font-weight: $boldFontWeight;
 	}
 
 	.quantity-button {
@@ -48,7 +47,7 @@
 
 		&:focus {
 			background-color: darken($borderColor, 20);
-			box-shadow: 0 0 5px $primaryColor;
+			box-shadow: 0 0 5px 1px $focusColor;
 		}
 	}
 }

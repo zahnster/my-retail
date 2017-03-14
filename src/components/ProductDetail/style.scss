@@ -3,7 +3,7 @@
 .product-detail {
 	.product-title {
 		@extend .l1-header;
-		margin: 2rem 0;
+		margin: $baseSpacing 0;
 		text-align: center;
 	}
 
@@ -12,22 +12,22 @@
 	}
 
 	.product-actions {
-		padding: 20px 0;
+		margin: $baseSpacing 0 $baseSpacing * 1.5;
 
 		.button {
-			margin-right: 20px;
+			margin-right: $baseSpacing;
 		}
 	}
 
 	.product-returns {
-		margin: 10px 0;
+		margin: $baseSpacing 0;
 		display: flex;
 		align-items: center;
 
 		.product-returns-title {
-			padding-right: 10px;
+			padding-right: $baseSpacing;
 			font-size: 1.2rem;
-			font-weight: 400;
+			font-weight: $normalFontWeight;
 			text-transform: lowercase;
 			line-height: 1;
 		}
@@ -35,37 +35,37 @@
 		.product-returns-content {
 			flex: 1;
 			border-left: 1px solid $borderColor;
-			padding: 0 10px;
+			padding: 0 $baseSpacing/2;
 			font-size: 0.7rem;
 		}
 	}
 
 	.meta-buttons {
-		margin: 20px 0;
+		margin: $baseSpacing 0;
 
 		.button {
-			margin-right: 10px;
+			margin-right: $baseSpacing/2;
 		}
 	}
 
 	.product-highlights {
-		margin: 20px 0;
+		margin: $baseSpacing 0;
 
 		.product-highlights-title {
 			@extend .l2-header;
-			margin-bottom: 20px;
+			margin-bottom: $baseSpacing;
 		}
 
 		.product-highlights-list {
-			margin-left: 20px;
+			margin-left: $baseSpacing;
 			font-size: 0.9rem;
 
 			li {
-				margin-bottom: 5px;
+				margin-bottom: $baseSpacing/4;
 			}
 
 			strong {
-				font-weight: 400;
+				font-weight: $normalFontWeight;
 			}
 		}
 	}

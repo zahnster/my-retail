@@ -10,7 +10,7 @@
 	background: linear-gradient(lighten($primaryColor, 15), lighten($primaryColor, 5) 5px, $primaryColor 10px);
 	color: $textContrastColor;
 	font-size: 1.1rem;
-	font-weight: 200;
+	font-weight: $thinFontWeight;
 	letter-spacing: 0.05rem;
 	text-transform: uppercase;
 	box-shadow: $buttonShadow;

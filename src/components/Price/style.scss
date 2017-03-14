@@ -3,13 +3,13 @@
 .price {
 	color: $textAltColor;
 	font-size: 1.75rem;
-	font-weight: 700;
+	font-weight: $boldFontWeight;
 
 	.price-type {
 		margin-left: 5px;
 		color: $textColor;
 		font-size: 0.8rem;
-		font-weight: 400;
+		font-weight: $normalFontWeight;
 		text-transform: lowercase;
 	}
 }
