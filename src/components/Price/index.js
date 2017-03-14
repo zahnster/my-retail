@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 
+// Component stylesheet
+import './style.css'
+
 class Price extends Component {
 	render() {
-		const price = this.props.offers[0].OfferPrice[0].formattedPriceValue
+		const priceData = this.props.offers[0].OfferPrice[0]
 
 		return (
 			<div className='price'>
-				<p>{price}</p>
+				<p>
+					{priceData.formattedPriceValue}
+					
+					<span className='price-type'>
+						{priceData.priceQualifier}
+					</span>
+				</p>
 			</div>
 		)
 	}

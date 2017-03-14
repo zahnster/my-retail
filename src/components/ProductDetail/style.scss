@@ -1,0 +1,13 @@
+@import '../../globals';
+
+.product-detail {
+	.product-title {
+		@extend .l1-header;
+		text-align: center;
+		margin: 2rem 0;
+	}
+
+	.price {
+		margin-top: 1rem;
+	}
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 // Component imports
+import Header from './components/Header'
 import ProductDetail from './components/ProductDetail'
 
 // Stylesheet
@@ -13,12 +14,16 @@ import sampleProductData from './data.js'
 class App extends Component {
   render() {
   	const product = sampleProductData.CatalogEntryView[0]
-  	console.log('product', product)
 
     return (
-      <div className="App">
+      <div className='app'>
 	    <Helmet title={`${product.title} :: myRetail`} />
-        <ProductDetail product={product} />
+
+	    <Header />
+
+	    <div className='content'>
+	        <ProductDetail product={product} />
+	    </div>
       </div>
     )
   }

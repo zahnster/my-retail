@@ -1,0 +1,15 @@
+@import '../../globals';
+
+.promotions {
+	margin: 1rem 0;
+	padding: 1rem 0 0.5rem;
+	border: 1px solid #bbb;
+	border-width: 1px 0;
+
+	.promo-item {
+		color: $primaryColor;
+		list-style: none;
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+	}
+}

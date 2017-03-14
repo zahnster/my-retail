@@ -8,6 +8,9 @@ import Promotions from '../Promotions'
 import QuantityField from '../QuantityField'
 import Reviews from '../Reviews'
 
+// Component stylesheet
+import './style.css'
+
 class ProductDetail extends Component {
 	constructor() {
 		super()
@@ -44,7 +47,7 @@ class ProductDetail extends Component {
 
 		return (
 			<div className='product-detail'>
-				<h1>{product.title}</h1>
+				<h1 className='product-title'>{product.title}</h1>
 				
 				<Carousel images={product.Images[0]} />
 
@@ -71,7 +74,9 @@ class ProductDetail extends Component {
 				<div className='product-highlights'>
 					<h2>Product Highlights</h2>
 					<ul>
-						{product.ItemDescription[0].features.map((item, index) => <li key={`highlight-${index}`} dangerouslySetInnerHTML={{__html: item}}></li>)}
+						{product.ItemDescription[0].features.map((item, index) => (
+							<li key={`highlight-${index}`} dangerouslySetInnerHTML={{__html: item}}></li>
+						))}
 					</ul>
 				</div>
 
