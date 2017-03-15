@@ -17,13 +17,13 @@ class App extends Component {
 
     return (
       <div className='app'>
-	    <Helmet title={`${product.title} :: myRetail`} />
+  	    <Helmet title={`${product.title} :: myRetail`} />
 
-	    <Header />
+  	    <Header />
 
-	    <div className='content'>
-	        <ProductDetail product={product} />
-	    </div>
+  	    <div className='content'>
+  	        <ProductDetail product={product} />
+  	    </div>
       </div>
     )
   }

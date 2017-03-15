@@ -19,7 +19,6 @@ A 'mobile first' UI approach has been taken with this interface, with responsive
 On top of React, this project utilizes the following OSS projects:
  * React Helmet, for document head content management.
  * MomentJS, for easy date formatting.
- * Bootstrap 4 source, for responsive media query utilities.
  * Modernizr, for <picture> tag support.
 
 

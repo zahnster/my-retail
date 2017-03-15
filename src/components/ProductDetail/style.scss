@@ -1,6 +1,9 @@
 @import '../../globals';
 
 .product-detail {
+	max-width: 960px;
+	margin: 0 auto;
+
 	.product-title {
 		@extend .l1-header;
 		margin: $baseSpacing 0;
@@ -25,7 +28,7 @@
 		align-items: center;
 
 		.product-returns-title {
-			padding-right: $baseSpacing;
+			padding-right: $baseSpacing/2;
 			font-size: 1.2rem;
 			font-weight: $normalFontWeight;
 			text-transform: lowercase;
@@ -68,5 +71,24 @@
 				font-weight: $normalFontWeight;
 			}
 		}
+	}
+
+	// columns for widescreen browsers.
+	&.wide-view {
+		display: flex;
+
+		.column-content {
+			width: 50%;
+
+			&:first-child {
+				padding-right: $baseSpacing/2;
+			}
+
+			&:not(:first-child) {
+				padding-left: $baseSpacing/2
+			}
+		}
+
+		// border: 1px solid red;
 	}
 }
