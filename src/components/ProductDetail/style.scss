@@ -1,0 +1,72 @@
+@import '../../globals';
+
+.product-detail {
+	.product-title {
+		@extend .l1-header;
+		margin: $baseSpacing 0;
+		text-align: center;
+	}
+
+	.price {
+		margin-top: 1rem;
+	}
+
+	.product-actions {
+		margin: $baseSpacing 0 $baseSpacing * 1.5;
+
+		.button {
+			margin-right: $baseSpacing;
+		}
+	}
+
+	.product-returns {
+		margin: $baseSpacing 0;
+		display: flex;
+		align-items: center;
+
+		.product-returns-title {
+			padding-right: $baseSpacing;
+			font-size: 1.2rem;
+			font-weight: $normalFontWeight;
+			text-transform: lowercase;
+			line-height: 1;
+		}
+
+		.product-returns-content {
+			flex: 1;
+			border-left: 1px solid $borderColor;
+			padding: 0 $baseSpacing/2;
+			font-size: 0.7rem;
+		}
+	}
+
+	.meta-buttons {
+		margin: $baseSpacing 0;
+
+		.button {
+			margin-right: $baseSpacing/2;
+		}
+	}
+
+	.product-highlights {
+		margin: $baseSpacing 0;
+
+		.product-highlights-title {
+			@extend .l2-header;
+			margin-bottom: $baseSpacing;
+		}
+
+		.product-highlights-list {
+			margin-left: $baseSpacing;
+			font-size: 0.9rem;
+
+			li {
+				margin-bottom: $baseSpacing/4;
+			}
+
+			strong {
+				font-weight: $normalFontWeight;
+			}
+		}
+	}
+}

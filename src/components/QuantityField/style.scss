@@ -1,0 +1,63 @@
+@import '../../globals';
+
+.quantity-field {
+	display: inline-block;
+	border: 1px solid $borderColor;
+	border-radius: 2px;
+	padding: 0.2rem;
+	text-transform: lowercase;
+
+	.quantity-label {
+		font-size: 0.9rem;
+		margin: 0 50px 0 5px;
+	}
+
+	input {
+		appearance: none;
+		border: none;
+		outline: none;
+
+		display: inline-block;
+		width: 30px;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: $boldFontWeight;
+	}
+
+	.quantity-button {
+		$buttonSize: 22px;
+
+		margin: 0.2rem;
+		position: relative;
+		height: $buttonSize;
+		width: $buttonSize;
+		overflow: hidden;
+		border: none;
+		border-radius: 20px;
+		outline: none;
+		background: url('/images/minus.png') center no-repeat $borderColor;
+		background-size: 14px 2px;
+		color: $textContrastColor;
+		text-indent: -5000rem;
+
+		&.increment {
+			background-image: url('/images/plus.png');
+			background-size: 14px;
+		}
+
+		&:focus {
+			background-color: darken($borderColor, 20);
+			box-shadow: 0 0 5px 1px $focusColor;
+		}
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+	.quantity-field .quantity-button {
+		background-image: url('/images/minus@2x.png');
+
+		&.increment {
+			background-image: url('/images/plus@2x.png');
+		}
+	}
+}

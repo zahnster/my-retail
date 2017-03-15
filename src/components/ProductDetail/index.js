@@ -8,6 +8,9 @@ import Promotions from '../Promotions'
 import QuantityField from '../QuantityField'
 import Reviews from '../Reviews'
 
+// Component stylesheet
+import './style.css'
+
 class ProductDetail extends Component {
 	constructor() {
 		super()
@@ -44,7 +47,7 @@ class ProductDetail extends Component {
 
 		return (
 			<div className='product-detail'>
-				<h1>{product.title}</h1>
+				<h1 className='product-title'>{product.title}</h1>
 				
 				<Carousel images={product.Images[0]} />
 
@@ -53,25 +56,27 @@ class ProductDetail extends Component {
 				<QuantityField />
 
 				<div className='product-actions'>
-					<Button label='Pick Up In Store' clickHandler={this.openStorePickup} />
+					<Button label='Pick Up In Store' clickHandler={this.openStorePickup} cssClass='alt' />
 					<Button label='Add To Cart' clickHandler={this.addToCart} />
 				</div>
 
 				<div className='product-returns'>
-					<h3>Returns</h3>
-					<p>This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store and online.</p>
+					<h3 className='product-returns-title'>Returns</h3>
+					<p className='product-returns-content'>This item must be returned within 30 days of the ship date. See return policy for details. Prices, promotions, styles and availability may vary by store and online.</p>
 				</div>
 
 				<div className='meta-buttons'>
-					<Button label='Add to Registry' clickHandler={this.addToRegistry} />
-					<Button label='Add To List' clickHandler={this.addToList} />
-					<Button label='Share' clickHandler={this.share} />
+					<Button label='Add to Registry' clickHandler={this.addToRegistry} cssClass='secondary' />
+					<Button label='Add To List' clickHandler={this.addToList} cssClass='secondary' />
+					<Button label='Share' clickHandler={this.share} cssClass='secondary' />
 				</div>
 
 				<div className='product-highlights'>
-					<h2>Product Highlights</h2>
-					<ul>
-						{product.ItemDescription[0].features.map((item, index) => <li key={`highlight-${index}`} dangerouslySetInnerHTML={{__html: item}}></li>)}
+					<h2 className='product-highlights-title'>Product Highlights</h2>
+					<ul className='product-highlights-list'>
+						{product.ItemDescription[0].features.map((item, index) => (
+							<li key={`highlight-${index}`} dangerouslySetInnerHTML={{__html: item}}></li>
+						))}
 					</ul>
 				</div>
 

@@ -1,0 +1,79 @@
+@import '../../globals';
+
+.rating-stars {
+	$starSize: 20px;
+
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	text-indent: -5000rem;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0; bottom: 0;
+		background-repeat: repeat-x;
+	}
+
+	&::before {
+		left: 0;
+		background-image: url('/images/star-full.png');
+	}
+
+	&::after {
+		right: 0;
+		background-image: url('/images/star-empty.png');
+		width: 0;
+	}
+
+	@mixin star-size-config($baseSize) {
+		height: $baseSize;
+		width: $baseSize*5;
+
+		&::before,
+		&::after {
+			background-size: $baseSize;
+		}
+
+		&::before {
+			width: $baseSize*5;
+		}
+
+		&[data-rating='1']::before,
+		&[data-rating='4']::after {
+			width: $baseSize;
+		}
+
+		&[data-rating='2']::before,
+		&[data-rating='3']::after {
+			width: $baseSize * 2;
+		}
+
+		&[data-rating='3']::before,
+		&[data-rating='2']::after {
+			width: $baseSize * 3;
+		}
+
+		&[data-rating='4']::before,
+		&[data-rating='1']::after {
+			width: $baseSize * 4;
+		}
+	}
+
+	@include star-size-config($starSize);
+
+	&.alt {
+		@include star-size-config($starSize/1.8);
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+	.rating-stars::before {
+		background-image: url('/images/star-full@2x.png');
+	}
+
+	.rating-stars::after {
+		background-image: url('/images/star-empty@2x.png');
+	}
+}

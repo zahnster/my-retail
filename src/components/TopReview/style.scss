@@ -1,0 +1,39 @@
+@import '../../globals';
+
+.top-review {
+	.top-review-header {
+		margin-bottom: $baseSpacing/2;
+		border-bottom: 1px solid $borderColor;
+		padding-bottom: $baseSpacing/2;
+		font-size: 0.8rem;
+
+		.top-review-type {
+			color: $textAltColor;
+			font-size: 1.1rem;
+			font-weight: $normalFontWeight;
+			text-transform: uppercase;
+		}
+	}
+
+	.top-review-content {
+		color: $textAltColor;
+		font-size: 0.8rem;
+	}
+
+	.top-review-title {
+		font-size: 1.1rem;
+	}
+
+	.top-review-author {
+		margin-top: $baseSpacing/2;		
+	}
+
+	a {
+		color: $textLinkColor;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
