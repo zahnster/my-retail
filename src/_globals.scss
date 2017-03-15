@@ -9,6 +9,8 @@ $textColor: #777;
 $textAltColor: #000;
 $textContrastColor: #fff;
 
+$textLinkColor: #0968A9;
+
 $borderColor: #ccc;
 $focusColor: #0968A9;
 
@@ -16,12 +18,16 @@ $baseSpacing: 20px;
 
 $thinFontWeight: 200;
 $normalFontWeight: 400;
-$boldFontWeight: 600;
+$boldFontWeight: 700;
 
 
 /////
  // Typography
  //
+@mixin l1-header {
+
+}
+
 .l1-header {
 	color: $textAltColor;
 	font-weight: $thinFontWeight;

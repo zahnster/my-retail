@@ -23,7 +23,6 @@
 
 	// Hover state
 	&:hover {
-
 	}
 
 	// Focus state
@@ -43,7 +42,7 @@
 		box-shadow: none;
 
 		&:hover {
-			background: $darkenedColor;
+			background: darken($tertiaryColor, 7);
 		}
 
 		&:focus {

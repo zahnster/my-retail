@@ -1,0 +1,54 @@
+@import '../../globals';
+
+.reviews {
+	margin: $baseSpacing*2 0 $baseSpacing;
+
+	.review-summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: $baseSpacing/2;
+		padding: 0 $baseSpacing/2;
+		color: $textAltColor;
+		font-weight: $boldFontWeight;
+		font-size: 0.9rem;
+
+		.rating-stars {
+			margin-right: $baseSpacing/4;
+		}
+
+		a {
+			color: $textAltColor;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.top-reviews {
+		display: flex;
+		border-radius: 2px;
+		padding: $baseSpacing/2 $baseSpacing;
+		background: $tertiaryColor;
+
+		.top-review {
+			width: 50%;
+
+			&:first-child {
+				.top-review-header,
+				.top-review-content {
+					padding-right: $baseSpacing/2;
+				}
+			}
+
+			&:not(:first-child) {
+				.top-review-header,
+				.top-review-content {
+					padding-left: $baseSpacing/2;
+				}
+			}
+		}
+	}
+}
