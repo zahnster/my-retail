@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Picture extends Component {
 	render() {
 		return (
-			<picture>
+			<picture className={this.props.cssClass}>
 				<img src={this.props.image} alt='' />
 			</picture>
 		)
@@ -11,7 +11,8 @@ class Picture extends Component {
 }
 
 Picture.propTypes = {
-	image: React.PropTypes.string.isRequired
+	image: React.PropTypes.string.isRequired,
+	cssClass: React.PropTypes.string
 }
 
 export default Picture

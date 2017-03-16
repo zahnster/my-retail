@@ -1,0 +1,142 @@
+@import '../../globals';
+
+.carousel {
+	$transition: 250ms ease;
+
+	.carousel-gallery {
+		transform: translateZ(0);
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+		max-width: 500px;
+		white-space: nowrap;
+
+		picture {
+			position: relative;
+			display: none;
+			width: 100%;
+			text-align: center;
+
+			img {
+				max-width: 100%;
+			}
+
+			&.active {
+				display: inline-block;
+				top: 0; left: 0;
+			}
+
+			&.previous,
+			&.next {
+				position: absolute;
+				display: inline-block;
+				top: 0;
+			}
+
+			&.previous {
+				right: 100%;
+			}
+
+			&.next {
+				left: 100%;
+			}
+		}
+	}
+
+	.carousel-controls {
+		display: flex;
+		justify-content: center;
+		margin-top: $baseSpacing;
+
+		.carousel-control {
+			position: relative;
+			border: none;
+			outline: none;
+			width: 40px;
+			background: none;
+			text-indent: -5000rem;
+
+			&.control-next {
+				transform: rotate(180deg);
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				margin: -12px 0 0 -10px;
+				top: 50%; left: 50%;
+				height: 25px;
+				width: 20px;
+				background: url('/images/slideshow-button.png') no-repeat;
+				background-size: 16px 51px;
+			}
+
+			&:focus::after {
+				background-position: 0 -25px;
+			}
+		}
+	}
+
+	.carousel-thumbnails {
+		.carousel-thumbnail {
+			display: inline-block;
+			margin: 0 3px;
+			outline: none;
+			border: 1px solid transparent;
+			background: none;
+
+			&.active {
+				border-color: $borderColor;
+			}
+
+			&:focus {
+				border: 1px dashed $borderColor;
+			}
+		}
+
+		picture {
+			display: inline-block;
+			border-radius: 2px;
+			width: 60px;
+			padding: 5px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&.move-previous {
+		picture {
+			&.active {
+				left: 100%;
+				transition: $transition;
+			}
+
+			&.previous {
+				right: 0;
+				transition: $transition;				
+			}
+		}
+	}
+
+	&.move-next {
+		picture {
+			&.active {
+				left: -100%;
+				transition: $transition;
+			}
+
+			&.next {
+				left: 0;
+				transition: $transition;
+			}
+		}
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+	.carousel .carousel-controls button::after {
+		background-image: url('/images/slideshow-button@2x.png');
+	}
+}
