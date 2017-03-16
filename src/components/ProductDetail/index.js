@@ -38,7 +38,7 @@ class ProductDetail extends Component {
 
 	checkForWideLayout() {
 		const isWide = document.body.clientWidth > 768
-		this.setState({ isWide })
+		if (isWide !== this.state.isWide) this.setState({ isWide })
 	}
 
 	openStorePickup() {
