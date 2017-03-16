@@ -8,4 +8,9 @@ function Picture(props) {
 	)
 }
 
+Picture.propTypes = {
+	image: React.PropTypes.string.isRequired,
+	cssClass: React.PropTypes.string
+}
+
 export default Picture
