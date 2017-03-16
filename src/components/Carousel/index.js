@@ -128,15 +128,23 @@ class Carousel extends Component {
 				</div>
 
 				<div className='carousel-controls'>
-					<button className='control-previous' onClick={this.goToPreviousSlide}>Previous</button>
+					<button className='carousel-control control-previous' onClick={this.goToPreviousSlide}>Previous</button>
 
 					<div className='carousel-thumbnails'>
-						<Picture image={slides[previousSlideIndex]} />
-						<Picture image={slides[slideIndex]} cssClass='active' />
-						<Picture image={slides[nextSlideIndex]} />
+						<button className='carousel-thumbnail' onClick={this.goToPreviousSlide}>
+							<Picture image={slides[previousSlideIndex]} />
+						</button>
+						
+						<button className='carousel-thumbnail active'>
+							<Picture image={slides[slideIndex]} />
+						</button>
+						
+						<button className='carousel-thumbnail' onClick={this.goToNextSlide}>
+							<Picture image={slides[nextSlideIndex]} onClick={this.goToNextSlide} />
+						</button>
 					</div>
 
-					<button className='control-next' onClick={this.goToNextSlide}>Next</button>
+					<button className='carousel-control control-next' onClick={this.goToNextSlide}>Next</button>
 				</div>
 			</div>
 		)

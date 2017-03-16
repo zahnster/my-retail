@@ -48,7 +48,7 @@
 		justify-content: center;
 		margin-top: $baseSpacing;
 
-		button {
+		.carousel-control {
 			position: relative;
 			border: none;
 			outline: none;
@@ -78,6 +78,22 @@
 	}
 
 	.carousel-thumbnails {
+		.carousel-thumbnail {
+			display: inline-block;
+			margin: 0 3px;
+			outline: none;
+			border: 1px solid transparent;
+			background: none;
+
+			&.active {
+				border-color: $borderColor;
+			}
+
+			&:focus {
+				border: 1px dashed $borderColor;
+			}
+		}
+
 		picture {
 			display: inline-block;
 			border-radius: 2px;
@@ -86,10 +102,6 @@
 
 			img {
 				width: 100%;
-			}
-
-			&.active {
-				border: 1px solid $borderColor;
 			}
 		}
 	}
