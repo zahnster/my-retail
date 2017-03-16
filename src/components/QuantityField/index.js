@@ -3,15 +3,11 @@ import React, { Component } from 'react'
 // Component stylesheet
 import './style.css'
 
-// Configuration Constants
-const MIN_QUANTITY = 1
-const MAX_QUANTITY = 99
-
 class QuantityField extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 
-		this.state = { quantity: 1 }
+		this.state = { quantity: props.initialValue }
 
 		this.updateQuantity = this.updateQuantity.bind(this)
 		this.incrementQuantity = this.incrementQuantity.bind(this)
@@ -21,13 +17,13 @@ class QuantityField extends Component {
 
 	// increase quantity by one
 	incrementQuantity() {
-		const quantity = Math.min(this.state.quantity + 1, MAX_QUANTITY)
+		const quantity = Math.min(this.state.quantity + 1, this.props.maxValue)
 		this.setState({ quantity })
 	}
 
 	// decrease quantity by one, unless it is at min value
 	decrementQuantity() {
-		const quantity = Math.max((this.state.quantity - 1), MIN_QUANTITY)
+		const quantity = Math.max((this.state.quantity - 1), this.props.minValue)
 		this.setState({ quantity })
 	}
 
@@ -43,14 +39,14 @@ class QuantityField extends Component {
 		if (submittedValue) submittedValue = parseInt(submittedValue, 10)
 
 		// don't allow values over max
-		if (submittedValue > MAX_QUANTITY) submittedValue = MAX_QUANTITY
+		if (submittedValue > this.props.maxValue) submittedValue = this.props.maxValue
 
 		this.setState({ quantity: submittedValue })
 	}
 
 	// validate that any user submitted entry is a valid value
 	validateQuantity() {
-		let quantity = this.state.quantity || MIN_QUANTITY
+		let quantity = this.state.quantity || this.props.initialValue
 		this.setState({ quantity })
 	}
 
@@ -71,6 +67,18 @@ class QuantityField extends Component {
 			</div>
 		)
 	}
+}
+
+QuantityField.defaultProps = {
+	initialValue: 1,
+	minValue: 1,
+	maxValue: 99
+}
+
+QuantityField.propTypes = {
+	initialValue: React.PropTypes.number,
+	minValue: React.PropTypes.number,
+	maxValue: React.PropTypes.number
 }
 
 export default QuantityField
