@@ -61,8 +61,30 @@ class ProductDetail extends Component {
 		console.log('share')
 	}
 
+	storePickupButton() {
+		const channelCode = parseInt(this.props.product.purchasingChannelCode, 10)
+		let button = null
+
+		if (channelCode === 0 || channelCode === 2) {
+			button = <Button label='Pick Up In Store' clickHandler={this.openStorePickup} cssClass='alt' />
+		}
+
+		return button
+	}
+
+	addToCartButton() {
+		const channelCode = parseInt(this.props.product.purchasingChannelCode, 10)
+		let button = null
+
+		if (channelCode === 0 || channelCode === 1) {
+			button = <Button label='Add To Cart' clickHandler={this.addToCart} />
+		}
+
+		return button
+	}
+
 	render() {
-		const product = this.props.product
+		const { product } = this.props
 		const productDetailClassName = this.state.isWide ? 'product-detail wide-view' : 'product-detail'
 
 		// assigning review component to different injection vars, 
@@ -86,8 +108,8 @@ class ProductDetail extends Component {
 					<QuantityField />
 
 					<div className='product-actions'>
-						<Button label='Pick Up In Store' clickHandler={this.openStorePickup} cssClass='alt' />
-						<Button label='Add To Cart' clickHandler={this.addToCart} />
+						{this.storePickupButton()}
+						{this.addToCartButton()}
 					</div>
 
 					<div className='product-returns'>
