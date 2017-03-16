@@ -14,10 +14,11 @@ This project is built with modern browsers in mind, and is expected to work in I
 
 ### Open-Source Dependencies
 
-On top of React, this project utilizes the following OSS projects:
+On top of React / Create React App, this project utilizes the following OSS projects:
  * Sass, for CSS variables, mixins, nesting, and more.
  * React Helmet, for document head content management.
  * MomentJS, for easy date formatting.
+ * Enzyme, for better testing support.
  
 
 ## Code Structure and Organization
