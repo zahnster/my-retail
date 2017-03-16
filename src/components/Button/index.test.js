@@ -5,7 +5,6 @@ import { shallow } from 'enzyme'
 import Button from './index'
 
 describe('Button', () => {
-	let disabled = false
 	let clicked = false
 
 	const div = document.createElement('div')
@@ -13,10 +12,8 @@ describe('Button', () => {
 		clicked = true
 	}
 
-	const button = <Button label='Test' clickHandler={clickEvent} isDisabled={disabled} />
+	const button = <Button label='Test' clickHandler={clickEvent} />
 	const shallowButton = shallow(button)
-
-	disabled = true
 
 	it('renders without crashing', () => {
 		ReactDOM.render(button, div)
