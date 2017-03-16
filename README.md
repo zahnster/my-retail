@@ -11,16 +11,14 @@ This project is not currently ejected from create-react-app, although it easily 
 
 This project is built with modern browsers in mind, and is expected to work in IE9+. This is in line with React's support table (as well as Microsoft's).
 
-A 'mobile first' UI approach has been taken with this interface, with responsive breakpoints for phones, tablets, and the desktop.
-
 
 ### Open-Source Dependencies
 
 On top of React, this project utilizes the following OSS projects:
+ * Sass, for CSS variables, mixins, nesting, and more.
  * React Helmet, for document head content management.
  * MomentJS, for easy date formatting.
- * Modernizr, for <picture> tag support.
-
+ 
 
 ## Code Structure and Organization
 
@@ -43,7 +41,7 @@ Clone or download this project and run 'npm install' to install all necessary de
 
 ## Running Development Server
 
-Once installed, the development server can be run with 'npm start'. By default, the development server will be http://localhost:3000/, although another port may be chosen if 3000 is not available.
+Once installed, the development server can be run with 'npm run start-dev'.  By default, the development server will be http://localhost:3000/, although another port may be chosen if 3000 is not available.
 
 
 ## Testing
@@ -56,6 +54,8 @@ More information about testing through the Create React App setup can be found h
 
 
 ## Continuous Integration
+
+Continuous Integration is currently setup with Codeship, although integration can be done with any number of services. Continuous integration is an excellent way to pre-flight code and ensure successful builds and deployments.
 
 
 ## Production Build and Deployment
