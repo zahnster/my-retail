@@ -16,9 +16,14 @@
 
 	.product-actions {
 		margin: $baseSpacing 0 $baseSpacing * 1.5;
+		display: flex;
 
 		.button {
-			margin-right: $baseSpacing;
+			width: 50%;
+
+			&:not(:first-child) {
+				margin-left: $baseSpacing/2;
+			}
 		}
 	}
 
@@ -45,9 +50,14 @@
 
 	.meta-buttons {
 		margin: $baseSpacing 0;
+		display: flex;
 
 		.button {
-			margin-right: $baseSpacing/2;
+			width: 33.3%;
+
+			&:not(:first-child) {
+				margin-left: $baseSpacing/2;
+			}
 		}
 	}
 

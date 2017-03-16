@@ -19,21 +19,34 @@
 	&.alt {
 		border-color: $textAltColor;
 		background: linear-gradient(lighten($textAltColor, 50), lighten($textAltColor, 20) 5px, $textAltColor 10px);
+
+		&:not([disabled]) {
+			&:hover {
+				background: linear-gradient(lighten($textAltColor, 55), lighten($textAltColor, 30) 5px, lighten($textAltColor, 12) 10px);
+			}
+
+			&:active {
+				background: $textAltColor;
+			}
+		}
 	}
 
-	// Hover state
-	&:hover {
-	}
+	&:not([disabled]) {
+		&:hover {
+			background: linear-gradient(lighten($primaryColor, 20), lighten($primaryColor, 7) 5px, lighten($primaryColor, 3) 10px);
+		}
 
-	// Focus state
-	&:focus {
-		box-shadow: 0 0 5px 1px $focusColor;
+		&:focus {
+			box-shadow: 0 0 5px 1px $focusColor;
+		}
+
+		&:active {
+			background: $primaryColor;
+		}
 	}
 
 	// Secondary style button
 	&.secondary {
-		$darkenedColor: darken($tertiaryColor, 15);
-
 		border: none;
 		padding: 4px 15px;
 		background: $tertiaryColor;
@@ -42,12 +55,17 @@
 		box-shadow: none;
 
 		&:hover {
-			background: darken($tertiaryColor, 7);
+			background: darken($tertiaryColor, 4);
 		}
 
 		&:focus {
 			box-shadow: 0 0 4px 0 $focusColor;
-			background: $darkenedColor;
+			background: darken($tertiaryColor, 12);
 		}
+	}
+
+	// Disabled buttons
+	&[disabled] {
+		opacity: 0.25;
 	}
 }

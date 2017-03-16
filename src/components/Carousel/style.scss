@@ -50,6 +50,7 @@
 
 		.carousel-control {
 			position: relative;
+			overflow: hidden;			
 			border: none;
 			outline: none;
 			width: 40px;
@@ -58,6 +59,7 @@
 
 			&.control-next {
 				transform: rotate(180deg);
+				text-indent: 5000rem;
 			}
 
 			&::after {
