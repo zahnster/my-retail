@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // Component stylesheet
 import './style.css'
 
-class RatingStars extends Component {
-	render() {
-		const { rating } = this.props
-		const cssClass = `rating-stars ${this.props.cssClass}`
+function RatingStars(props) {
+	const { rating, cssClass } = props
 
-		return (
-			<div className={cssClass} data-rating={rating}>
-				{rating} of 5 stars
-			</div>
-		)
-	}
+	return (
+		<div className={`rating-stars ${cssClass}`} data-rating={rating}>
+			{rating} of 5 stars
+		</div>
+	)
 }
 
 RatingStars.propTypes = {

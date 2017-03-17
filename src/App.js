@@ -12,21 +12,20 @@ import './App.css'
 import sampleProductData from './data.js'
 
 class App extends Component {
-  render() {
-  	const product = sampleProductData.CatalogEntryView[0]
+	render() {
+		const product = sampleProductData.CatalogEntryView[0]
 
-    return (
-      <div className='app'>
-  	    <Helmet title={`${product.title} :: myRetail`} />
+		return (
+			<div className='app'>
+				<Helmet title={`${product.title} :: myRetail`} />
+				<Header />
 
-  	    <Header />
-
-  	    <div className='content'>
-  	        <ProductDetail product={product} />
-  	    </div>
-      </div>
-    )
-  }
+				<div className='content'>
+					<ProductDetail product={product} />
+				</div>
+			</div>
+		)
+	}
 }
 
 export default App

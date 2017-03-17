@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Picture extends Component {
-	render() {
-		return (
-			<picture className={this.props.cssClass}>
-				<img src={this.props.image} alt='' />
-			</picture>
-		)
-	}
+function Picture(props) {
+	return (
+		<div className={`picture ${props.cssClass}`}>
+			<img src={props.image} alt='' />
+		</div>
+	)
 }
 
 Picture.propTypes = {

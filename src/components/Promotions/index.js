@@ -1,28 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // Component stylesheet
 import './style.css'
 
-class Promotions extends Component {
-	render() {
-		const promotions = this.props.promotions
+function Promotions(props) {
+	const promotions = props.promotions
 
-		return (
-			<div className='promotions'>
-				<ul>
-					{promotions.map((promo, index) => {
-						const description = promo.Description[0]
+	return (
+		<div className='promotions'>
+			<ul>
+				{promotions.map((promo, index) => {
+					const description = promo.Description[0]
 
-						return (
-							<li className='promo-item' key={`promo-${index}`}>
-								{description.shortDescription}
-							</li>
-						)
-					})}
-				</ul>
-			</div>
-		)
-	}
+					return (
+						<li className='promo-item' key={`promo-${index}`}>
+							{description.shortDescription}
+						</li>
+					)
+				})}
+			</ul>
+		</div>
+	)	
 }
 
 Promotions.propTypes = {

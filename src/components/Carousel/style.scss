@@ -11,7 +11,7 @@
 		max-width: 500px;
 		white-space: nowrap;
 
-		picture {
+		.picture {
 			position: relative;
 			display: none;
 			width: 100%;
@@ -96,7 +96,7 @@
 			}
 		}
 
-		picture {
+		.picture {
 			display: inline-block;
 			border-radius: 2px;
 			width: 60px;
@@ -109,7 +109,7 @@
 	}
 
 	&.move-previous {
-		picture {
+		.picture {
 			&.active {
 				left: 100%;
 				transition: $transition;
@@ -123,7 +123,7 @@
 	}
 
 	&.move-next {
-		picture {
+		.picture {
 			&.active {
 				left: -100%;
 				transition: $transition;
