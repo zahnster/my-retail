@@ -82,7 +82,7 @@ Additionally, due to this transitionend event, testing for this component is als
 
 ### Picture Component
 
-The intent with the Picture component is to use the <picture> element to render the appropriate asset depending on the screen resolution and pixel density. Since the sample data did not include retina imagery, this component was not improved upon, and a simpler approach was used.
+The intent with the Picture component is to use the &lt;picture&gt; element to render the appropriate asset depending on the screen resolution and pixel density. Since the sample data did not include retina imagery, this component was not improved upon, and a simpler approach was used.
 
 
 ### Price Component
