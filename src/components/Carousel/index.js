@@ -99,12 +99,15 @@ class Carousel extends Component {
 		const carouselClass = transitionState ? `carousel move-${transitionState}` : 'carousel'
 		const previousSlideIndex = this.previousSlideIndex()
 		const nextSlideIndex = this.nextSlideIndex()
+		const carouselAXLabel = `This is a product image gallery with ${slides.length} images`
 
 		return (
 			<div className={carouselClass}>
-				<div className='carousel-gallery'>
+				<div className='carousel-gallery' aria-label={carouselAXLabel}>
 					{slides.map((image, index) => {
 						let pictureClassName = ''
+						let ariaHidden = slideIndex !== index
+						const imageCount = index + 1
 
 						switch (index) {
 							case slideIndex:
@@ -123,28 +126,45 @@ class Carousel extends Component {
 							break;
 						}
 
-						return <Picture key={`picture-${index}`} image={image} cssClass={pictureClassName} /> 
+						return (
+							<div 
+								className='gallery-image' 
+								role='tabpanel' 
+								id={`tabpanel-${index}`} 
+								aria-hidden={ariaHidden}
+								key={`picture-${index}`} 
+							>
+								<Picture 
+									image={image} 
+									alt={`Product image ${imageCount} of ${slides.length}`}
+									cssClass={pictureClassName}  /> 
+							</div>
+						)
 					})}
 				</div>
 
 				<div className='carousel-controls'>
-					<button className='carousel-control control-previous' onClick={this.goToPreviousSlide}>Previous</button>
+					<button className='carousel-control control-previous' onClick={this.goToPreviousSlide}>
+						Previous image
+					</button>
 
-					<div className='carousel-thumbnails'>
-						<button className='carousel-thumbnail' onClick={this.goToPreviousSlide}>
+					<div className='carousel-thumbnails' role='tablist'>
+						<button className='carousel-thumbnail' onClick={this.goToPreviousSlide} aria-label='Go to previous product image'>
 							<Picture image={slides[previousSlideIndex]} />
 						</button>
 						
-						<button className='carousel-thumbnail active'>
+						<button className='carousel-thumbnail active' aria-label='Current product image'>
 							<Picture image={slides[slideIndex]} />
 						</button>
 						
-						<button className='carousel-thumbnail' onClick={this.goToNextSlide}>
+						<button className='carousel-thumbnail' onClick={this.goToNextSlide} aria-label='Go to next product image'>
 							<Picture image={slides[nextSlideIndex]} onClick={this.goToNextSlide} />
 						</button>
 					</div>
 
-					<button className='carousel-control control-next' onClick={this.goToNextSlide}>Next</button>
+					<button className='carousel-control control-next' onClick={this.goToNextSlide}>
+						Next image
+					</button>
 				</div>
 			</div>
 		)
