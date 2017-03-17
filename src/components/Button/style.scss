@@ -6,7 +6,7 @@
 	outline: none;
 	border: 1px solid $primaryColor;
 	border-radius: 2px;
-	padding: 5px 15px;
+	padding: $baseSpacing/4 $baseSpacing/2;
 	background: linear-gradient(lighten($primaryColor, 15), lighten($primaryColor, 5) 5px, $primaryColor 10px);
 	color: $textContrastColor;
 	font-size: 1.1rem;
@@ -48,7 +48,6 @@
 	// Secondary style button
 	&.secondary {
 		border: none;
-		padding: 4px 15px;
 		background: $tertiaryColor;
 		color: $textAltColor;
 		font-size: 0.8rem;

@@ -7,7 +7,6 @@ import Button from './index'
 describe('Button', () => {
 	let clicked = false
 
-	const div = document.createElement('div')
 	const clickEvent = () => {
 		clicked = true
 	}
@@ -16,7 +15,7 @@ describe('Button', () => {
 	const shallowButton = shallow(button)
 
 	it('renders without crashing', () => {
-		ReactDOM.render(button, div)
+		ReactDOM.render(button, document.createElement('div'))
 	})
 
 	it('displays the correct label', () => {
